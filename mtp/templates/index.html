@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Form</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+    <script>
+        function fillExampleData() {
+            document.getElementById('device_model').value = "Google Pixel 5";
+            document.getElementById('operating_system').value = "Android";
+            document.getElementById('gender').value = "Female";
+            document.getElementById('app_usage_time_(min/day)').value = 105;
+            document.getElementById('screen_on_time_(hours/day)').value = 2.2;
+            document.getElementById('battery_drain_(mah/day)').value = 1002;
+            document.getElementById('number_of_apps_installed').value = 29;
+            document.getElementById('data_usage_(mb/day)').value = 453;
+            document.getElementById('age').value = 31;
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Enter User Data</h1>
+        <form action="/predict" method="post">
+            <label for="device_model">Device Model:</label>
+            <select id="device_model" name="device_model" required>
+                <option value="Google Pixel 5">Google Pixel 5</option>
+                <option value="OnePlus 9">OnePlus 9</option>
+                <option value="Xiaomi Mi 11">Xiaomi Mi 11</option>
+                <option value="iPhone 12">iPhone 12</option>
+                <option value="Samsung Galaxy S21">Samsung Galaxy S21</option>
+            </select><br><br>
+            
+            <label for="operating_system">Operating System:</label>
+            <select id="operating_system" name="operating_system" required>
+                <option value="Android">Android</option>
+                <option value="iOS">iOS</option>
+            </select><br><br>
+            
+            <label for="gender">Gender:</label>
+            <input type="text" id="gender" name="gender" required><br><br>
+            
+            <label for="app_usage_time_(min/day)">App Usage Time (min/day):</label>
+            <input type="number" id="app_usage_time_(min/day)" name="app_usage_time_(min/day)" required><br><br>
+            
+            <label for="screen_on_time_(hours/day)">Screen On Time (hours/day):</label>
+            <input type="number" step="0.1" id="screen_on_time_(hours/day)" name="screen_on_time_(hours/day)" required><br><br>
+            
+            <label for="battery_drain_(mah/day)">Battery Drain (mAh/day):</label>
+            <input type="number" id="battery_drain_(mah/day)" name="battery_drain_(mah/day)" required><br><br>
+            
+            <label for="number_of_apps_installed">Number of Apps Installed:</label>
+            <input type="number" id="number_of_apps_installed" name="number_of_apps_installed" required><br><br>
+            
+            <label for="data_usage_(mb/day)">Data Usage (MB/day):</label>
+            <input type="number" id="data_usage_(mb/day)" name="data_usage_(mb/day)" required><br><br>
+            
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" required><br><br>
+            
+            <input type="submit" value="Predict">
+        </form>
+        <button onclick="fillExampleData()">Fill Example Data</button>
+    </div>
+</body>
+</html>
