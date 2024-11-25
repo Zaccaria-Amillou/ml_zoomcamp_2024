@@ -27,9 +27,7 @@ This dataset downloaded from Kaggle, provides a comprehensive analysis of mobile
 - Example data autofill
 
 ## Project Structure
-
-your_project/
-│
+```
 ├── app.py
 ├── model.py
 ├── requirements.txt
@@ -42,6 +40,7 @@ your_project/
 │
 └── static/
     └── styles.css
+```
 
 ## Getting Started
 
@@ -53,35 +52,35 @@ your_project/
 ### Installation
 
 1. Clone the repository:
-'''
+```
    git clone https://github.com/Zaccaria-Amillou/ml_zoomcamp_2024/tree/main/mtp.git
    cd your_project
-'''
+```
 2. Create a virtual environment and activate it:
-'''
+```
    python -m venv venv
    source venv/bin/activate  # On Windows, use `venv\Scripts\activate`
-'''
+```
 3. Install the dependencies:
-'''
+```
    pip install -r requirements.txt
-'''
+```
 4. Run the Flask application:
-'''
+```
    python app.py
-'''
+```
 5. Open your web browser and go to http://127.0.0.1:5000/.
 
 ### Using Docker
 
 1. Build the Docker image:
-'''
+```
    docker-compose build
-'''
+```
 2. Run the Docker container:
-'''
+```
    docker-compose up
-'''
+```
 3. Open your web browser and go to http://127.0.0.1:5000/.
 
 ## Usage
